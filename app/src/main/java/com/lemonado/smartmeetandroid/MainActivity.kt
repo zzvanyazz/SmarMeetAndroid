@@ -12,11 +12,14 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.lemonado.smartmeetandroid.databinding.ActivityMainBinding
+import com.lemonado.smartmeetandroid.ui.MyDialogFragment
+import com.lemonado.smartmeetandroid.ui.gallery.GalleryFragment
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

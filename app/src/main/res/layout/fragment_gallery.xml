@@ -6,10 +6,64 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.gallery.GalleryFragment">
-    <CalendarView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:id="@+id/calendarView"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+            <ImageButton
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:background="#0000"
+                    android:src="@drawable/arrow_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+            </ImageButton>
+
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="sfojbnsd"
+                    android:textAlignment="center"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" android:id="@+id/btn_choose_time">
+
+
+            </com.google.android.material.button.MaterialButton>
+
+            <ImageButton
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:background="#0000"
+                    android:src="@drawable/arrow_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+            </ImageButton>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_weight="30"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

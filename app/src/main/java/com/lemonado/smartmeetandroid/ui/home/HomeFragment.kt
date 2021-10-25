@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.lemonado.smartmeetandroid.R
 import com.lemonado.smartmeetandroid.databinding.FragmentHomeBinding
+import com.lemonado.smartmeetandroid.ui.MyDialogFragment
 
 class HomeFragment : Fragment() {
 
@@ -24,18 +25,12 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        homeViewModel.text.observe(viewLifecycleOwner) { binding.textHome.text = it }
+        MyDialogFragment.show(fragmentManager!!, " ")
+        return binding.root
     }
 
     override fun onDestroyView() {
